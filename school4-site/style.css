@@ -1,0 +1,408 @@
+/* Негізгі стильдер */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f5;
+}
+
+/* Фон – видео немесе фото */
+#bg-video,
+#bg-image {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+#bg-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: -2;
+}
+
+/* Жоғарғы жолақ */
+.topbar {
+  background:#0d47a1;
+  color:#fff;
+  padding:6px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:14px;
+}
+.topbar-links {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.topbar-links a {
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+}
+
+/* Тіл ауыстырғыш */
+.lang-switch {
+  display:flex;
+  gap:6px;
+  margin-left:10px;
+}
+.lang-btn {
+  border:none;
+  border-radius:999px;
+  padding:4px 10px;
+  font-size:12px;
+  cursor:pointer;
+  background:rgba(255,255,255,0.1);
+  color:#fff;
+}
+.lang-btn.active {
+  background:#ffca28;
+  color:#111;
+  font-weight:600;
+}
+
+/* Негізгі көк меню */
+header {
+  background:#1565c0;
+  padding:10px 40px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.logo-box {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+}
+.logo {
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#fff;
+  overflow:hidden;
+  flex-shrink:0;
+}
+.logo img { width:100%; height:100%; object-fit:cover; }
+.logo-text { font-size:13px; line-height:1.3; }
+.logo-text strong { display:block; font-size:15px; }
+
+.main-menu {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.menu-item { position:relative; }
+
+.menu-btn {
+  border:none;
+  border-radius:999px;
+  padding:10px 20px;
+  background:#1e88e5;
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  white-space:nowrap;
+}
+.menu-item:not(.simple) .menu-btn::after {
+  content:"▾";
+  font-size:10px;
+}
+.menu-item.simple .menu-btn::after { content:""; }
+.menu-btn:hover { background:#2196f3; }
+
+.dropdown {
+  position:absolute;
+  top:100%;
+  left:0;
+  min-width:230px;
+  background:#ffffff;
+  color:#111;
+  border-radius:12px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.25);
+  padding:8px 0;
+  margin-top:6px;
+  display:none;
+  z-index:10;
+}
+.dropdown a {
+  display:block;
+  padding:6px 16px;
+  font-size:14px;
+  text-decoration:none;
+  color:#111;
+  white-space:nowrap;
+}
+.dropdown a:hover { background:#e3f2fd; }
+.menu-item:hover .dropdown { display:block; }
+
+/* Негізгі контент */
+main {
+  max-width:1200px;
+  margin:20px auto 40px;
+  padding:0 20px;
+}
+
+/* Ескі hero (қажет болса) */
+.hero {
+  padding:22px 26px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.94);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+}
+.hero-left h1 { margin:0 0 8px; font-size:28px; }
+.hero-left p { margin:0; font-size:15px; color:#444; }
+
+.hero-actions {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.hero-btn {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#ffca28;
+  border-radius:999px;
+  padding:10px 18px;
+  font-weight:600;
+  text-decoration:none;
+  color:#111;
+  box-shadow:0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* Card – ішкі беттер */
+.card {
+  padding:22px 26px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.94);
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+  margin-top:10px;
+}
+.card h1 {
+  margin-top:0;
+  font-size:24px;
+  margin-bottom:10px;
+}
+.card h2 {
+  margin-top:18px;
+  font-size:18px;
+}
+.card p,
+.card li {
+  font-size:15px;
+  color:#444;
+}
+
+/* Кестелер */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.info-table th,
+.info-table td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+}
+.info-table th {
+  background: #e3f2fd;
+  text-align: left;
+}
+
+/* Әлеуметтік желілер */
+.social-block {
+  margin-top:24px;
+  padding-top:12px;
+  border-top:1px dashed #ddd;
+  font-size:15px;
+}
+.social-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:8px;
+}
+.social-links a {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+  padding:6px 12px;
+  border-radius:999px;
+  background:#e3f2fd;
+  color:#0d47a1;
+  font-size:14px;
+}
+
+/* Адамдар grid – әкімшілік, мұғалімдер, ардагерлер */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.person-card {
+  background: rgba(255,255,255,0.96);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.16);
+  text-align: center;
+  font-size: 14px;
+}
+.person-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  background:#eee;
+}
+.person-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.person-meta {
+  font-size: 13px;
+  color:#555;
+}
+
+/* Құжаттар тізімі + медиа */
+.file-list {
+  margin: 6px 0 14px;
+  padding-left: 18px;
+  font-size: 15px;
+}
+.file-list li {
+  margin-bottom: 4px;
+}
+.media-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:8px;
+}
+.media-row img,
+.media-row video {
+  max-width:260px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Мектептің жетістіктері картасы (жаңа блок) */
+.achievements-card {
+  padding:22px 32px;
+}
+
+.ach-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:32px;
+}
+
+.ach-text h1 {
+  margin:0 0 10px;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:0.04em;
+}
+
+.ach-text p {
+  margin:0;
+  font-size:15px;
+  color:#555;
+}
+
+.ach-actions {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:flex-end;
+  min-width:220px;
+}
+
+.ach-btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 26px;
+  border-radius:999px;
+  border:none;
+  background:#ffca28;
+  color:#111;
+  font-size:15px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
+  cursor:pointer;
+  transition:transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  white-space:nowrap;
+}
+
+.ach-btn:hover {
+  background:#ffd54f;
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Тіл блоктары */
+.lang { display:none; }
+
+/* Footer */
+footer {
+  text-align:center;
+  padding:16px;
+  font-size:13px;
+  color:#eee;
+}
+
+/* Адаптив */
+@media (max-width:900px) {
+  header {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .hero {
+    flex-direction:column;
+  }
+  .hero-actions {
+    width:100%;
+  }
+  .hero-btn {
+    justify-content:center;
+  }
+
+  .ach-row {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .ach-actions {
+    align-items:stretch;
+    width:100%;
+  }
+  .ach-btn {
+    width:100%;
+    text-align:center;
+  }
+}

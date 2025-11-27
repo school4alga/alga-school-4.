@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>360° Виртуалды тур – №4 Алға орта мектебі</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bg-type="image" data-bg-src="images/virtual-bg.jpg">
+
+<video id="bg-video" autoplay muted loop playsinline></video>
+<div id="bg-image"></div>
+<div class="overlay"></div>
+
+<!-- ЖОҒАРҒЫ АҚПАРАТ ЖОЛАҒЫ -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span class="lang lang-kk">«№4 Алға орта мектебі» КММ</span>
+    <span class="lang lang-ru">КГУ «Средняя школа №4 г. Алга»</span>
+  </div>
+
+  <div class="topbar-links">
+    <a href="https://www.instagram.com/alga_mektep_4/?igsh=MW14MnltYXc1ejZ4Mw%3D%3D#" target="_blank">IG</a>
+    <a href="tel:+77133743122">8 (7133) 74-31-22</a>
+
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang-btn="kk">Қазақша</button>
+      <button class="lang-btn" data-lang-btn="ru">Русский</button>
+    </div>
+  </div>
+</div>
+
+<!-- НЕГІЗГІ КӨК МЕНЮ (бірдей) -->
+<header>
+  <div class="logo-box">
+    <div class="logo">
+      <img src="images/logo-school4.png" alt="Мектеп логотипі">
+    </div>
+    <div class="logo-text">
+      <span class="lang lang-kk">
+        Ақтөбе облысының білім басқармасы<br>
+        Алға ауданының білім бөлімі<br>
+        <strong>№4 Алға орта мектебі</strong>
+      </span>
+      <span class="lang lang-ru">
+        Управление образования Актюбинской области<br>
+        Отдел образования Алгинского района<br>
+        <strong>Средняя школа №4 г. Алга</strong>
+      </span>
+    </div>
+  </div>
+
+  <nav class="main-menu">
+    <div class="menu-item simple">
+      <a href="index.html">
+        <button class="menu-btn">
+          <span class="lang lang-kk">Басты бет</span>
+          <span class="lang lang-ru">Главная</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="menu-item">
+      <button class="menu-btn">
+        <span class="lang lang-kk">Мектеп туралы</span>
+        <span class="lang lang-ru">О школе</span>
+      </button>
+      <div class="dropdown">
+        <a href="about.html">
+          <span class="lang lang-kk">Мектеп туралы жалпы мәлімет</span>
+          <span class="lang lang-ru">Общая информация о школе</span>
+        </a>
+        <a href="school-charter.html">
+          <span class="lang lang-kk">Мектеп жарғысы</span>
+          <span class="lang lang-ru">Устав школы</span>
+        </a>
+        <a href="history.html">
+          <span class="lang lang-kk">Мектеп тарихы</span>
+          <span class="lang lang-ru">История школы</span>
+        </a>
+        <a href="mission.html">
+          <span class="lang lang-kk">Мектеп миссиясы</span>
+          <span class="lang lang-ru">Миссия школы</span>
+        </a>
+        <a href="structure.html">
+          <span class="lang lang-kk">Мектеп құрылымы</span>
+          <span class="lang lang-ru">Структура школы</span>
+        </a>
+        <a href="administration.html">
+          <span class="lang lang-kk">Әкімшілік құрамы</span>
+          <span class="lang lang-ru">Администрация</span>
+        </a>
+        <a href="teachers.html">
+          <span class="lang lang-kk">Педагогикалық құрам</span>
+          <span class="lang lang-ru">Педагогический состав</span>
+        </a>
+        <a href="veteran-teachers.html">
+          <span class="lang lang-kk">Ардагер ұстаздар</span>
+          <span class="lang lang-ru">Ветераны труда</span>
+        </a>
+        <a href="documents.html">
+          <span class="lang lang-kk">Құжаттар</span>
+          <span class="lang lang-ru">Документы</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <button class="menu-btn">
+        <span class="lang lang-kk">Оқу үдерісі</span>
+        <span class="lang lang-ru">Учебный процесс</span>
+      </button>
+      <div class="dropdown">
+        <a href="curriculum.html">
+          <span class="lang lang-kk">Оқу жоспарлары</span>
+          <span class="lang lang-ru">Учебные планы</span>
+        </a>
+        <a href="schedule.html">
+          <span class="lang lang-kk">Сабақ кестесі</span>
+          <span class="lang lang-ru">Расписание уроков</span>
+        </a>
+        <a href="cabinets.html">
+          <span class="lang lang-kk">Кабинеттер</span>
+          <span class="lang lang-ru">Кабинеты</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <button class="menu-btn">
+        <span class="lang lang-kk">Тәрбие жұмысы</span>
+        <span class="lang lang-ru">Воспитательная работа</span>
+      </button>
+      <div class="dropdown">
+        <a href="clubs.html">
+          <span class="lang lang-kk">Үйірмелер</span>
+          <span class="lang lang-ru">Кружки</span>
+        </a>
+        <a href="events.html">
+          <span class="lang lang-kk">Іс-шаралар</span>
+          <span class="lang lang-ru">Мероприятия</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <button class="menu-btn">
+        <span class="lang lang-kk">Мұғалімдер үшін</span>
+        <span class="lang lang-ru">Для учителей</span>
+      </button>
+      <div class="dropdown">
+        <a href="methodical.html">
+          <span class="lang lang-kk">Әдістемелік материалдар</span>
+          <span class="lang lang-ru">Методические материалы</span>
+        </a>
+        <a href="teachers-achievements.html">
+          <span class="lang lang-kk">Мұғалімдер жетістіктері</span>
+          <span class="lang lang-ru">Достижения учителей</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <button class="menu-btn">
+        <span class="lang lang-kk">Ата-аналар үшін</span>
+        <span class="lang lang-ru">Для родителей</span>
+      </button>
+      <div class="dropdown">
+        <a href="parents-council.html">
+          <span class="lang lang-kk">Ата-аналар комитеті</span>
+          <span class="lang lang-ru">Родительский комитет</span>
+        </a>
+        <a href="parents-memo.html">
+          <span class="lang lang-kk">Ата-аналарға жадынама</span>
+          <span class="lang lang-ru">Памятка для родителей</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <button class="menu-btn">
+        <span class="lang lang-kk">Оқушылар үшін</span>
+        <span class="lang lang-ru">Для учащихся</span>
+      </button>
+      <div class="dropdown">
+        <a href="students-achievements.html">
+          <span class="lang lang-kk">Оқушылар жетістіктері</span>
+          <span class="lang lang-ru">Достижения учащихся</span>
+        </a>
+        <a href="olympiads.html">
+          <span class="lang lang-kk">Олимпиадалар</span>
+          <span class="lang lang-ru">Олимпиады</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-item simple">
+      <a href="vacancies.html">
+        <button class="menu-btn">
+          <span class="lang lang-kk">Бос орындар</span>
+          <span class="lang lang-ru">Вакансии</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="menu-item simple">
+      <a href="contacts.html">
+        <button class="menu-btn">
+          <span class="lang lang-kk">Байланыс</span>
+          <span class="lang lang-ru">Контакты</span>
+        </button>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="card">
+    <!-- Қазақша блок -->
+    <div class="lang lang-kk">
+      <h1>360° Виртуалды тур</h1>
+      <p>Бұл бөлімде мектептің 360° форматтағы немесе қарапайым видео турлары орналастырылды. Төмендегі видеолар арқылы мектеп ғимараты мен кабинеттерін онлайн тамашалай аласыз.</p>
+
+      <div class="media-row" style="margin-top:14px;">
+        <div class="video-grid">
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video1.mp4" type="video/mp4">
+              Сіздің браузеріңіз video тегін қолдамайды.
+            </video>
+            <p class="video-caption">Мектеп кіреберісі</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video2.mp4" type="video/mp4">
+              Сіздің браузеріңіз video тегін қолдамайды.
+            </video>
+            <p class="video-caption">Негізгі дәліз</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video3.mp4" type="video/mp4">
+              Сіздің браузеріңіз video тегін қолдамайды.
+            </video>
+            <p class="video-caption">Сынып кабинеті</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video4.mp4" type="video/mp4">
+              Сіздің браузеріңіз video тегін қолдамайды.
+            </video>
+            <p class="video-caption">Спорт залы</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video5.mp4" type="video/mp4">
+              Сіздің браузеріңіз video тегін қолдамайды.
+            </video>
+            <p class="video-caption">Асхана</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Орысша блок -->
+    <div class="lang lang-ru">
+      <h1>360° виртуальный тур</h1>
+      <p>В этом разделе размещены 360°-тур или обычные видеоролики о школе. Ниже вы можете посмотреть видео и познакомиться со зданием и кабинетами.</p>
+
+      <div class="media-row" style="margin-top:14px;">
+        <div class="video-grid">
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video1.mp4" type="video/mp4">
+              Ваш браузер не поддерживает тег video.
+            </video>
+            <p class="video-caption">Вход в школу</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video2.mp4" type="video/mp4">
+              Ваш браузер не поддерживает тег video.
+            </video>
+            <p class="video-caption">Главный коридор</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video3.mp4" type="video/mp4">
+              Ваш браузер не поддерживает тег video.
+            </video>
+            <p class="video-caption">Учебный кабинет</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video4.mp4" type="video/mp4">
+              Ваш браузер не поддерживает тег video.
+            </video>
+            <p class="video-caption">Спортзал</p>
+          </div>
+
+          <div class="video-item">
+            <video controls preload="metadata">
+              <source src="videos/video5.mp4" type="video/mp4">
+              Ваш браузер не поддерживает тег video.
+            </video>
+            <p class="video-caption">Столовая</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> «№4 Алға орта мектебі» КММ
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
